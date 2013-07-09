@@ -1,0 +1,16 @@
+name: MCMOBA
+version: 1.55
+description: Minecraft MOBA
+author: lexwebb,
+database: false
+#Make sure you have a database ready!!! otherwise errors will fly!
+
+main: com.goldrushmc.bukkit.main.Main
+
+commands:
+  fall:
+   description: Test command?
+   aliases: [fall]
+   permission: goldrushmc.collapsetest
+   usage: /<command>
+
