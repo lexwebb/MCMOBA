@@ -1,6 +1,12 @@
 package net.lexwebb.mcmoba.Classes;
 
+import net.lexwebb.mcmoba.Abilities.Ability;
+import net.lexwebb.mcmoba.Main;
+import net.lexwebb.mcmoba.defaults.DefaultListener;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,7 +15,7 @@ import org.bukkit.entity.Player;
  * Time: 23:10
  * To change this template use File | Settings | File Templates.
  */
-public abstract class PlayerClass {
+public abstract class PlayerClass extends DefaultListener{
     int baseHealth;
     int baseMana;
     int baseDamage;
@@ -20,7 +26,13 @@ public abstract class PlayerClass {
     Player player;
     String type;
 
+    public Ability ability1;
+    public Ability ability2;
+    public Ability ability3;
+    public Ability ability4;
+
     public PlayerClass(Player player, int baseHealth, int baseMana, int baseDamage, String type){
+        super(Main.instance);
         this.player = player;
         this.baseHealth = baseHealth;
         this.currentHealth = baseHealth;
@@ -30,6 +42,20 @@ public abstract class PlayerClass {
         this.baseDamage = baseDamage;
         this.type = type;
     }
+
+    @EventHandler
+    private void playerInteractEvent(PlayerInteractEvent e){
+        Action eAction = e.getAction();
+        Player p = e.getPlayer();
+        if (eAction.equals(Action.RIGHT_CLICK_AIR)) {
+            onRightClick();
+        }
+    }
+
+    public void onRightClick(){
+
+    }
+
 
     public int getCurrentHealth() {
         return currentHealth;
