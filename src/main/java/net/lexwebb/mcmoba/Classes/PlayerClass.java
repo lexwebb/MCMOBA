@@ -4,9 +4,7 @@ import net.lexwebb.mcmoba.Abilities.Ability;
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,12 +14,12 @@ import org.bukkit.event.player.PlayerInteractEvent;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class PlayerClass extends DefaultListener{
-    int baseHealth;
-    int baseMana;
+    double baseHealth;
+    double baseMana;
     int baseDamage;
 
-    int currentHealth;
-    int currentMana;
+    double currentHealth;
+    double currentMana;
 
     Player player;
     String type;
@@ -31,7 +29,7 @@ public abstract class PlayerClass extends DefaultListener{
     public Ability ability3;
     public Ability ability4;
 
-    public PlayerClass(Player player, int baseHealth, int baseMana, int baseDamage, String type){
+    public PlayerClass(Player player, double baseHealth, double baseMana, int baseDamage, String type){
         super(Main.instance);
         this.player = player;
         this.baseHealth = baseHealth;
@@ -43,21 +41,36 @@ public abstract class PlayerClass extends DefaultListener{
         this.type = type;
     }
 
-    @EventHandler
-    private void playerInteractEvent(PlayerInteractEvent e){
-        Action eAction = e.getAction();
-        Player p = e.getPlayer();
-        if (eAction.equals(Action.RIGHT_CLICK_AIR)) {
-            onRightClick();
-        }
-    }
-
     public void onRightClick(){
 
     }
 
+    public void onLeftClick(){
 
-    public int getCurrentHealth() {
+    }
+
+    public void onAbilityOne(){
+        ability1.use();
+    }
+
+    public void onAbilityTwo(){
+        ability2.use();
+    }
+
+    public void onAbilityThree(){
+        ability3.use();
+    }
+
+    public void onAbilityFour(){
+        ability4.use();
+    }
+
+    public void onPlayerDamage(EntityDamageEvent e){
+
+    }
+
+    public double getCurrentHealth() {
+        currentHealth = player.getHealth();
         return currentHealth;
     }
 
@@ -65,7 +78,7 @@ public abstract class PlayerClass extends DefaultListener{
         this.currentHealth = currentHealth;
     }
 
-    public int getCurrentMana() {
+    public double getCurrentMana() {
         return currentMana;
     }
 
@@ -73,11 +86,11 @@ public abstract class PlayerClass extends DefaultListener{
         this.currentMana = currentMana;
     }
 
-    public int getBaseHealth() {
+    public double getBaseHealth() {
         return baseHealth;
     }
 
-    public int getBaseMana() {
+    public double getBaseMana() {
         return baseMana;
     }
 

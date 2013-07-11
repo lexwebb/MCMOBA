@@ -1,7 +1,10 @@
 package net.lexwebb.mcmoba.listeners;
 
+import net.lexwebb.mcmoba.Classes.Spectator;
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -21,11 +24,25 @@ public class PlayerLogLis extends DefaultListener{
 
     @EventHandler
     public void onPlayerLogin(PlayerLoginEvent e){
-        Main.instance.players.add(e.getPlayer());
+        Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new doLater(e.getPlayer()), 40);
     }
 
     @EventHandler
     public void onPlayerLogout(PlayerQuitEvent e){
         Main.instance.players.remove(e.getPlayer());
+        Main.instance.playerClass.remove(e.getPlayer());
+    }
+
+    public class doLater implements Runnable{
+        Player p;
+
+        public doLater(Player p){
+            this.p = p;
+        }
+        @Override
+        public void run() {
+            Main.instance.players.add(p);
+            Main.instance.playerClass.put(p, new Spectator(p));
+        }
     }
 }

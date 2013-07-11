@@ -1,6 +1,8 @@
 package net.lexwebb.mcmoba.Classes;
 
+import net.lexwebb.mcmoba.Abilities.Leap;
 import org.bukkit.entity.Player;
+import org.bukkit.event.entity.EntityDamageEvent;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,5 +15,15 @@ public class Spectator extends PlayerClass {
 
     public Spectator(Player player) {
         super(player, 1, 0, 0, "Spectator");
+
+        ability1 = new Leap(player);
+        ability2 = new Leap(player);
+        ability3 = new Leap(player);
+        ability4 = new Leap(player);
+    }
+
+    @Override
+    public void onPlayerDamage(EntityDamageEvent e) {
+        e.setCancelled(true);
     }
 }

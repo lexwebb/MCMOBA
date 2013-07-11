@@ -1,7 +1,12 @@
 package net.lexwebb.mcmoba.listeners;
 
+import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemHeldEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,12 +19,42 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class AbilityLis extends DefaultListener{
 
+
     public AbilityLis(JavaPlugin plugin) {
         super(plugin);
     }
 
     @EventHandler
-    private void onInventoryChange(PlayerItemHeldEvent e){
+    private void playerChangeHeldItem(PlayerItemHeldEvent e){
         int slot = e.getNewSlot();
+        e.getPlayer().sendMessage("test");
+        if(Main.instance.playerClass.containsKey(e.getPlayer())){
+            switch (slot) {
+                case 0: Main.instance.playerClass.get(e.getPlayer()).onAbilityOne(); e.setCancelled(true); break;
+                case 1: Main.instance.playerClass.get(e.getPlayer()).onAbilityTwo(); e.setCancelled(true); break;
+                case 2: Main.instance.playerClass.get(e.getPlayer()).onAbilityThree(); e.setCancelled(true); break;
+                case 3: Main.instance.playerClass.get(e.getPlayer()).onAbilityFour(); e.setCancelled(true); break;
+            }
+        } else {
+            e.getPlayer().sendMessage("Not in list");
+        }
+    }
+
+    @EventHandler
+    private void onPlayerDamage(EntityDamageEvent e){
+        double damage = e.getDamage();
+        if(e.getEntity() instanceof Player){
+            Main.instance.playerClass.get((Player) e.getEntity()).onPlayerDamage(e);
+        }
+    }
+
+    @EventHandler
+    private void playerInteractEvent(PlayerInteractEvent e){
+        Action eAction = e.getAction();
+        if (eAction.equals(Action.RIGHT_CLICK_AIR) || eAction.equals(Action.RIGHT_CLICK_BLOCK)) {
+            Main.instance.playerClass.get(e.getPlayer()).onRightClick();
+        } else if(eAction.equals(Action.LEFT_CLICK_AIR) || eAction.equals(Action.LEFT_CLICK_BLOCK)) {
+            Main.instance.playerClass.get(e.getPlayer()).onLeftClick();
+        }
     }
 }

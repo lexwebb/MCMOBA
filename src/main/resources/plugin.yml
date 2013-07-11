@@ -5,7 +5,7 @@ author: lexwebb,
 database: false
 #Make sure you have a database ready!!! otherwise errors will fly!
 
-main: com.goldrushmc.bukkit.main.Main
+main: net.lexwebb.mcmoba.Main
 
 commands:
   fall:

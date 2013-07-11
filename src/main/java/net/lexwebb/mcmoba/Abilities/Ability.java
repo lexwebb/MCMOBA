@@ -4,7 +4,6 @@ import net.lexwebb.mcmoba.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-import sun.plugin2.main.server.Plugin;
 
 import java.util.ArrayList;
 import java.util.List;
