@@ -27,7 +27,6 @@ public class AbilityLis extends DefaultListener{
     @EventHandler
     private void playerChangeHeldItem(PlayerItemHeldEvent e){
         int slot = e.getNewSlot();
-        e.getPlayer().sendMessage("test");
         if(Main.instance.playerClass.containsKey(e.getPlayer())){
             switch (slot) {
                 case 0: Main.instance.playerClass.get(e.getPlayer()).onAbilityOne(); e.setCancelled(true); break;
@@ -36,16 +35,14 @@ public class AbilityLis extends DefaultListener{
                 case 3: Main.instance.playerClass.get(e.getPlayer()).onAbilityFour(); e.setCancelled(true); break;
             }
         } else {
-            e.getPlayer().sendMessage("Not in list");
+
         }
     }
 
     @EventHandler
     private void onPlayerDamage(EntityDamageEvent e){
         double damage = e.getDamage();
-        if(e.getEntity() instanceof Player){
-            Main.instance.playerClass.get((Player) e.getEntity()).onPlayerDamage(e);
-        }
+
     }
 
     @EventHandler

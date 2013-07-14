@@ -23,18 +23,25 @@ public abstract class Ability {
     int cooldownLength;
     Boolean onCoolDown = false;
     int coolDownLeft = 0;
+    boolean inUse;
+
+    boolean customTimedPlayerEffect;
+    boolean customTimedtargetEffect;
+
     int taskId;
 
     List<LivingEntity> targets = new ArrayList<>();
 
     public Ability() {}
 
-    public Ability(Player player, String name, Boolean singleTarget, Boolean AoE, int cooldownLength){
+    public Ability(Player player, String name, Boolean singleTarget, Boolean AoE, int cooldownLength, boolean customTimedPlayerEffect, boolean customTimedtargetEffect){
         this.player = player;
         this.name = name;
         this.singleTarget = singleTarget;
         this.cooldownLength = cooldownLength;
         this.AoE = AoE;
+        this.customTimedPlayerEffect = customTimedPlayerEffect;
+        this.customTimedtargetEffect = customTimedtargetEffect;
     }
 
     public String getName() {
@@ -51,8 +58,11 @@ public abstract class Ability {
 
     public void use(){
         if(!onCoolDown){
-            playerEffect();
-            targetEffect();
+            if(!customTimedPlayerEffect)
+                playerEffect();
+            if(!customTimedtargetEffect)
+                targetEffect();
+            inUse = true;
             taskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player), 0, 20);
         }
     }
@@ -75,5 +85,13 @@ public abstract class Ability {
                 coolDownLeft--;
             }
         }
+    }
+
+    public int getCoolDownLeft() {
+        return coolDownLeft;
+    }
+
+    public Boolean getOnCoolDown() {
+        return onCoolDown;
     }
 }

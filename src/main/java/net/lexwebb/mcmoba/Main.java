@@ -27,7 +27,7 @@ public final class Main extends JavaPlugin {
     public final PlayerLogLis logLis = new PlayerLogLis(this);
 
     public final List<Player> players = new ArrayList<>();
-    public final HashMap<Player, Spectator> playerClass = new HashMap<>();
+    public final HashMap<Player, PlayerClass> playerClass = new HashMap<>();
 
     @Override
     public void onEnable() {

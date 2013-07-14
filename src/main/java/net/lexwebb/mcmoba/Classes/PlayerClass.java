@@ -3,8 +3,13 @@ package net.lexwebb.mcmoba.Classes;
 import net.lexwebb.mcmoba.Abilities.Ability;
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,6 +33,10 @@ public abstract class PlayerClass extends DefaultListener{
     public Ability ability2;
     public Ability ability3;
     public Ability ability4;
+    int AOneTaskId;
+    int ATwoTaskId;
+    int AThreeTaskId;
+    int AFourTaskId;
 
     public PlayerClass(Player player, double baseHealth, double baseMana, int baseDamage, String type){
         super(Main.instance);
@@ -50,23 +59,40 @@ public abstract class PlayerClass extends DefaultListener{
     }
 
     public void onAbilityOne(){
-        ability1.use();
+        if(!ability1.getOnCoolDown()){
+            ability1.use();
+            AOneTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 1), 0, 10);
+        } else {
+            player.sendMessage(ChatColor.DARK_RED +  "That Ability is on cooldown!");
+        }
+
     }
 
     public void onAbilityTwo(){
-        ability2.use();
+        if(!ability2.getOnCoolDown()){
+            ability2.use();
+            ATwoTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 2), 0, 10);
+        } else {
+            player.sendMessage(ChatColor.DARK_RED +  "That Ability is on cooldown!");
+        }
     }
 
     public void onAbilityThree(){
-        ability3.use();
+        if(!ability3.getOnCoolDown()){
+            ability3.use();
+            AThreeTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 3), 0, 10);
+        } else {
+            player.sendMessage(ChatColor.DARK_RED +  "That Ability is on cooldown!");
+        }
     }
 
     public void onAbilityFour(){
-        ability4.use();
-    }
-
-    public void onPlayerDamage(EntityDamageEvent e){
-
+        if(!ability4.getOnCoolDown()){
+            ability4.use();
+            AFourTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 4), 0, 10);
+        } else {
+            player.sendMessage(ChatColor.DARK_RED +  "That Ability is on cooldown!");
+        }
     }
 
     public double getCurrentHealth() {
@@ -104,5 +130,49 @@ public abstract class PlayerClass extends DefaultListener{
 
     public String getType() {
         return type;
+    }
+
+    public class cooldown implements Runnable{
+
+        Player p;
+        int abilNo;
+        public cooldown(Player p, int abilNo){
+            this.p = p;
+            this.abilNo = abilNo;
+        }
+
+        @Override
+        public void run() {
+            switch (abilNo) {
+                case 1:
+                    if(ability1.getCoolDownLeft() > 0){
+                        p.getInventory().getItem(0).setAmount(ability1.getCoolDownLeft());
+                    } else {
+                        Bukkit.getScheduler().cancelTask(AOneTaskId);
+                    }
+                    break;
+                case 2:
+                    if(ability2.getCoolDownLeft() > 0){
+                        p.getInventory().getItem(1).setAmount(ability2.getCoolDownLeft());
+                    } else {
+                        Bukkit.getScheduler().cancelTask(ATwoTaskId);
+                    }
+                    break;
+                case 3:
+                    if(ability3.getCoolDownLeft() > 0){
+                        p.getInventory().getItem(2).setAmount(ability3.getCoolDownLeft());
+                    } else {
+                        Bukkit.getScheduler().cancelTask(AThreeTaskId);
+                    }
+                    break;
+                case 4:
+                    if(ability4.getCoolDownLeft() > 0){
+                        p.getInventory().getItem(3).setAmount(ability4.getCoolDownLeft());
+                    } else {
+                        Bukkit.getScheduler().cancelTask(AFourTaskId);
+                    }
+                    break;
+            }
+        }
     }
 }
