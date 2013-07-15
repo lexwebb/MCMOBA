@@ -55,7 +55,7 @@ public class Leap extends Ability {
 
                 entity.setVelocity(v);
 
-                ((LivingEntity) entity).damage(6);
+                ((LivingEntity) entity).damage(6, player);
             }
 
         }
@@ -87,7 +87,7 @@ public class Leap extends Ability {
             if(inUse){
                 if(((Entity) p).isOnGround()){
                     targetEffect();
-                    player.sendMessage("Shockwaved");
+                    player.getWorld().playEffect(player.getLocation(), Effect.ZOMBIE_DESTROY_DOOR, 35);
                     inUse = false;
                     Bukkit.getScheduler().cancelTask(taskID);
                 }

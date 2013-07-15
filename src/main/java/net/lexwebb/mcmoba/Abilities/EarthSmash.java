@@ -2,10 +2,7 @@ package net.lexwebb.mcmoba.Abilities;
 
 import net.lexwebb.mcmoba.Main;
 import net.minecraft.server.v1_6_R1.Packet61WorldEvent;
-import org.bukkit.Bukkit;
-import org.bukkit.Effect;
-import org.bukkit.Material;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.craftbukkit.v1_6_R1.entity.CraftPlayer;
@@ -13,51 +10,39 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-import org.bukkit.util.BlockIterator;
 import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EarthSlam extends Ability {
+/**
+ * Created with IntelliJ IDEA.
+ * User: Lex
+ * Date: 14/07/13
+ * Time: 21:36
+ * To change this template use File | Settings | File Templates.
+ */
+public class EarthSmash extends Ability{
 
-    public EarthSlam(Player player){
-        super(player, "EarthSlam", false, true, 20, false, true);
-
-    }
-
-    @Override
-    public void targetEffect(){
+    public EarthSmash(Player player){
+        super(player, "EarthSmash", false, true, 20, false, false);
 
     }
 
     @Override
     public void playerEffect(){
-        int length = 10;
-
-        Vector v = player.getLocation().getDirection();
-        v.setY(0);
-
-        BlockIterator bli = new BlockIterator(player.getWorld(), player.getLocation().toVector(), v, -1, length);
-        List<Block> blockList = new ArrayList<>();
-
-        int itCount = 0;
-        while(bli.hasNext()){
-            Block currentBlock = bli.next();
-            blockList.add(currentBlock);
-            itCount++;
-            if(itCount > length)
-                break;
-        }
-
-        for(int i = 0; i<blockList.size();i++ ){
-            Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new liftBlock(blockList.get(i)), i * 2);
+        for(int i = 1; i <7;i++){
+            List<Location> blocks = circle(player.getLocation(), i, 1, true, false, -1);
+            for(Location l :blocks){
+                Block b = player.getWorld().getBlockAt(l);
+                Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new liftBlock(b), i * 2);
+            }
         }
 
         player.getWorld().playEffect(player.getLocation(), Effect.STEP_SOUND, 35);
         Packet61WorldEvent packet = new Packet61WorldEvent(2001, player.getLocation().getBlockX(), player.getLocation().getBlockY(),  player.getLocation().getBlockZ(), 20, true);
         ((CraftPlayer)player).getHandle().playerConnection.sendPacket(packet);
-        player.setVelocity(player.getVelocity().add(new Vector(0, 0.2, 0)));
+        player.setVelocity(player.getVelocity().add(new Vector(0, 0.5, 0)));
     }
 
     public class liftBlock implements Runnable{
@@ -98,5 +83,22 @@ public class EarthSlam extends Ability {
             }
         }
     }
-}
 
+    public static List<Location> circle (Location loc, Integer r, Integer h, Boolean hollow, Boolean sphere, int plus_y) {
+        List<Location> circleblocks = new ArrayList<Location>();
+        int cx = loc.getBlockX();
+        int cy = loc.getBlockY();
+        int cz = loc.getBlockZ();
+        for (int x = cx - r; x <= cx +r; x++)
+            for (int z = cz - r; z <= cz +r; z++)
+                for (int y = (sphere ? cy - r : cy); y < (sphere ? cy + r : cy + h); y++) {
+                    double dist = (cx - x) * (cx - x) + (cz - z) * (cz - z) + (sphere ? (cy - y) * (cy - y) : 0);
+                    if (dist < r*r && !(hollow && dist < (r-1)*(r-1))) {
+                        Location l = new Location(loc.getWorld(), x, y + plus_y, z);
+                        circleblocks.add(l);
+                    }
+                }
+
+        return circleblocks;
+    }
+}

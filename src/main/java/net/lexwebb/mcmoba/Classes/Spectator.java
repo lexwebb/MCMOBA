@@ -1,6 +1,7 @@
 package net.lexwebb.mcmoba.Classes;
 
 import net.lexwebb.mcmoba.Abilities.EarthSlam;
+import net.lexwebb.mcmoba.Abilities.EarthSmash;
 import net.lexwebb.mcmoba.Abilities.Leap;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -18,8 +19,8 @@ public class Spectator extends PlayerClass {
         super(player, 1, 0, 0, "Spectator");
 
         ability1 = new Leap(player);
-        ability2 = new Leap(player);
-        ability3 = new EarthSlam(player);
-        ability4 = new EarthSlam(player);
+        ability2 = new EarthSlam(player);
+        ability3 = new EarthSmash(player);
+        ability4 = new EarthSmash(player);
     }
 }
