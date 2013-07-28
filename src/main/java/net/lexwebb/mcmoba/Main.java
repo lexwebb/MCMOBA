@@ -1,7 +1,6 @@
 package net.lexwebb.mcmoba;
 
 import net.lexwebb.mcmoba.Classes.PlayerClass;
-import net.lexwebb.mcmoba.Classes.Spectator;
 import net.lexwebb.mcmoba.listeners.AbilityLis;
 import net.lexwebb.mcmoba.listeners.PlayerLogLis;
 import org.bukkit.entity.Player;
