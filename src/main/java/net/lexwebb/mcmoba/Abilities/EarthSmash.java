@@ -25,7 +25,7 @@ import java.util.List;
 public class EarthSmash extends Ability{
 
     public EarthSmash(Player player){
-        super(player, "EarthSmash", false, true, 20, false, false);
+        super(player, "EarthSmash", false, true, 1, false, false);
 
     }
 

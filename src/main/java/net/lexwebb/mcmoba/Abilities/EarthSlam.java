@@ -22,7 +22,7 @@ import java.util.List;
 public class EarthSlam extends Ability {
 
     public EarthSlam(Player player){
-        super(player, "EarthSlam", false, true, 20, false, true);
+        super(player, "EarthSlam", false, true, 1, false, true);
 
     }
 
