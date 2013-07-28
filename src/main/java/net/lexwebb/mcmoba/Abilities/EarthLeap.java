@@ -16,11 +16,11 @@ import org.bukkit.util.Vector;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Leap extends Ability {
+public class EarthLeap extends Ability {
 
     int taskID;
-    public Leap(Player player){
-        super(player, "Leap", false, true, 20, false, false);
+    public EarthLeap(Player player){
+        super(player, "EarthLeap", false, true, 20, false, false);
 
     }
 

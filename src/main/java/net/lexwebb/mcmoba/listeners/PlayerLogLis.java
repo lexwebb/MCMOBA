@@ -1,6 +1,6 @@
 package net.lexwebb.mcmoba.listeners;
 
-import net.lexwebb.mcmoba.Classes.Spectator;
+import net.lexwebb.mcmoba.Classes.EarthWarrior;
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
 import org.bukkit.Bukkit;
@@ -42,7 +42,7 @@ public class PlayerLogLis extends DefaultListener{
         @Override
         public void run() {
             Main.instance.players.add(p);
-            Main.instance.playerClass.put(p, new Spectator(p));
+            Main.instance.playerClass.put(p, new EarthWarrior(p));
         }
     }
 }

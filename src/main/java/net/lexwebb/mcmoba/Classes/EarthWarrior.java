@@ -2,9 +2,8 @@ package net.lexwebb.mcmoba.Classes;
 
 import net.lexwebb.mcmoba.Abilities.EarthSlam;
 import net.lexwebb.mcmoba.Abilities.EarthSmash;
-import net.lexwebb.mcmoba.Abilities.Leap;
+import net.lexwebb.mcmoba.Abilities.EarthLeap;
 import org.bukkit.entity.Player;
-import org.bukkit.event.entity.EntityDamageEvent;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,12 +12,12 @@ import org.bukkit.event.entity.EntityDamageEvent;
  * Time: 22:58
  * To change this template use File | Settings | File Templates.
  */
-public class Spectator extends PlayerClass {
+public class EarthWarrior extends PlayerClass {
 
-    public Spectator(Player player) {
-        super(player, 1, 0, 0, "Spectator");
+    public EarthWarrior(Player player) {
+        super(player, 1, 0, 0, "EarthWarrior");
 
-        ability1 = new Leap(player);
+        ability1 = new EarthLeap(player);
         ability2 = new EarthSlam(player);
         ability3 = new EarthSmash(player);
         ability4 = new EarthSmash(player);
