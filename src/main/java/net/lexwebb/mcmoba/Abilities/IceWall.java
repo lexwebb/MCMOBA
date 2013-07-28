@@ -13,11 +13,11 @@ import java.util.List;
  * Time: 12:52
  * To change this template use File | Settings | File Templates.
  */
-public class EarthWall extends Ability{
+public class IceWall extends Ability{
 
     Player player;
-    public EarthWall(Player player){
-        super(player, "EarthWall", false, true, 20, false, true);
+    public IceWall(Player player){
+        super(player, "IceWall", false, true, 20, false, true);
         this.player = player;
     }
 
