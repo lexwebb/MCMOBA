@@ -1,12 +1,12 @@
 package net.lexwebb.mcmoba.Abilities;
 
 import net.lexwebb.mcmoba.Main;
-import net.minecraft.server.v1_6_R1.Packet61WorldEvent;
+import net.minecraft.server.v1_6_R2.Packet61WorldEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
-import org.bukkit.craftbukkit.v1_6_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_6_R2.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -20,7 +20,7 @@ public class EarthLeap extends Ability {
 
     int taskID;
     public EarthLeap(Player player){
-        super(player, "EarthLeap", false, true, 1, false, false);
+        super(player, "EarthLeap", false, true, 5, false, false);
 
     }
 

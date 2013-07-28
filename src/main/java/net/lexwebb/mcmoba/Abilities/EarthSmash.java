@@ -1,11 +1,11 @@
 package net.lexwebb.mcmoba.Abilities;
 
 import net.lexwebb.mcmoba.Main;
-import net.minecraft.server.v1_6_R1.Packet61WorldEvent;
+import net.minecraft.server.v1_6_R2.Packet61WorldEvent;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
-import org.bukkit.craftbukkit.v1_6_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_6_R2.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.LivingEntity;
@@ -25,7 +25,7 @@ import java.util.List;
 public class EarthSmash extends Ability{
 
     public EarthSmash(Player player){
-        super(player, "EarthSmash", false, true, 1, false, false);
+        super(player, "EarthSmash", false, true, 5, false, false);
 
     }
 

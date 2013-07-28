@@ -1,14 +1,14 @@
 package net.lexwebb.mcmoba.Abilities;
 
 import net.lexwebb.mcmoba.Main;
-import net.minecraft.server.v1_6_R1.Packet61WorldEvent;
+import net.minecraft.server.v1_6_R2.Packet61WorldEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
-import org.bukkit.craftbukkit.v1_6_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_6_R2.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.LivingEntity;
@@ -22,7 +22,7 @@ import java.util.List;
 public class EarthSlam extends Ability {
 
     public EarthSlam(Player player){
-        super(player, "EarthSlam", false, true, 1, false, true);
+        super(player, "EarthSlam", false, true, 5, false, true);
 
     }
 
