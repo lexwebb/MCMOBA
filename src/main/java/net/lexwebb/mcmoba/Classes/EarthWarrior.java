@@ -1,5 +1,6 @@
 package net.lexwebb.mcmoba.Classes;
 
+import net.lexwebb.mcmoba.Abilities.EarthMissile;
 import net.lexwebb.mcmoba.Abilities.EarthSlam;
 import net.lexwebb.mcmoba.Abilities.EarthSmash;
 import net.lexwebb.mcmoba.Abilities.EarthLeap;
@@ -20,6 +21,6 @@ public class EarthWarrior extends PlayerClass {
         ability1 = new EarthLeap(player);
         ability2 = new EarthSlam(player);
         ability3 = new EarthSmash(player);
-        ability4 = new EarthSmash(player);
+        ability4 = new EarthMissile(player);
     }
 }
