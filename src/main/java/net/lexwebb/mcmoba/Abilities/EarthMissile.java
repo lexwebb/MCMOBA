@@ -103,7 +103,7 @@ public class EarthMissile extends Ability{
                             && b.getType() != Material.STATIONARY_WATER){
                         m = b.getType();
                         bi = b.getData();
-                       // b.setType(Material.AIR);
+                        b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.DOWN);
@@ -116,7 +116,7 @@ public class EarthMissile extends Ability{
                             || b.getRelative(BlockFace.UP).getType() == Material.STATIONARY_WATER){
                         m = b.getType();
                         bi = b.getData();
-                        //b.setType(Material.AIR);
+                        b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.UP);

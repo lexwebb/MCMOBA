@@ -64,7 +64,7 @@ public class EarthSmash extends Ability{
                     if(b.getRelative(BlockFace.DOWN).getTypeId() != 0){
                         m = b.getType();
                         bi = b.getData();
-                        //b.setType(Material.AIR);
+                        b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.DOWN);
@@ -73,7 +73,7 @@ public class EarthSmash extends Ability{
                     if(b.getRelative(BlockFace.UP).getTypeId() == 0){
                         m = b.getType();
                         bi = b.getData();
-                        //b.setType(Material.AIR);
+                        b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.UP);
@@ -81,17 +81,36 @@ public class EarthSmash extends Ability{
                 }
             }
 
-            FallingBlock block = b.getWorld().spawnFallingBlock(b.getLocation(), m, bi);
-            block.setVelocity(new Vector(0, 0.2, 0));
+            List<Entity> entlist = new ArrayList<>();
 
-            block.getWorld().playSound(block.getLocation(), Sound.DIG_STONE, 5, 1);
+            for(Entity ent : player.getWorld().getEntities())
+                if(ent instanceof FallingBlock){
+                    if(ent.getLocation().toVector().toBlockVector() == b.getLocation().toVector().toBlockVector()){
+                        //dont spawn
 
-            List<Entity> entList = block.getNearbyEntities(2, 2, 2);
-            for(Entity entity : entList){
-                if (entity instanceof LivingEntity && entity != player) {
-                    ((LivingEntity) entity).damage(6, player);
+                        for(Entity entity : player.getWorld().getEntities()){
+                            if (entity instanceof LivingEntity && entity != player) {
+                                //check radius
+                                ((LivingEntity) entity).damage(6, player);
+                            }
+                        }
+                    } else {
+
+                        //do spawn
+
+                        FallingBlock block = b.getWorld().spawnFallingBlock(b.getLocation(), m, bi);
+                        block.setVelocity(new Vector(0, 0.2, 0));
+
+                        block.getWorld().playSound(block.getLocation(), Sound.DIG_STONE, 5, 1);
+
+                        List<Entity> entList = block.getNearbyEntities(2, 2, 2);
+                        for(Entity entity : entList){
+                            if (entity instanceof LivingEntity && entity != player) {
+                                ((LivingEntity) entity).damage(6, player);
+                            }
+                        }
+                    }
                 }
-            }
         }
     }
 

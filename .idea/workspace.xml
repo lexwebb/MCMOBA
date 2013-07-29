@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0802b737-86ca-4c1a-9128-4a17019a7b2f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java" />
+    <list default="true" id="0802b737-86ca-4c1a-9128-4a17019a7b2f" name="Default" comment="Fixed crash error">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java" />
@@ -16,7 +15,7 @@
     <file path="/PlayerClass.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373819611430" ignored="false" />
     <file path="/Ability.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373822689392" ignored="false" />
     <file path="/LeapLis.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373327283840" ignored="false" />
-    <file path="/Dummy.txt" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375052725258" ignored="false" />
+    <file path="/Dummy.txt" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375082772386" ignored="false" />
     <file path="/PlayerLogLis.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375053033687" ignored="false" />
     <file path="/Spectaor.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373407566234" ignored="false" />
     <file path="/Spectator.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373834800686" ignored="false" />
@@ -25,7 +24,7 @@
     <file path="/Leap.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373833177484" ignored="false" />
     <file path="/fragment.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373829943571" ignored="false" />
     <file path="/EarthSlam.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373835719936" ignored="false" />
-    <file path="/EarthSmash.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373975082814" ignored="false" />
+    <file path="/EarthSmash.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375083235391" ignored="false" />
     <file path="/EarthWall.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1374002791503" ignored="false" />
     <file path="/EarthMissile.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375048079884" ignored="false" />
     <file path="/EarthWarrior.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375020822489" ignored="false" />
@@ -102,7 +101,7 @@
       <file leaf-file-name="EarthMissile.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="35" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.0">
+            <state line="107" column="43" selection-start="3612" selection-end="3612" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,7 +121,7 @@
       <file leaf-file-name="EarthSlam.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="53" selection-start="2906" selection-end="2906" vertical-scroll-proportion="0.0">
+            <state line="78" column="48" selection-start="2420" selection-end="2420" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,7 +152,7 @@
       <file leaf-file-name="EarthSmash.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="29" selection-start="3469" selection-end="3469" vertical-scroll-proportion="0.4100295">
+            <state line="91" column="45" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.32448378">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -220,8 +219,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java" />
       </list>
     </option>
@@ -885,7 +884,11 @@
       <created>1375052729638</created>
       <updated>1375052729638</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed crash error">
+      <created>1375056807667</created>
+      <updated>1375056807667</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -957,7 +960,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed crash error" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -979,6 +982,7 @@
     <MESSAGE value="Addes EarthWall" />
     <MESSAGE value="Renamed EarthWall to IceWall, Added EarthMissile instead" />
     <MESSAGE value="Update" />
+    <MESSAGE value="Fixed crash error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1074,15 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="53" selection-start="2906" selection-end="2906" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="39" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
@@ -1094,7 +1089,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="35" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.0">
+        <state line="107" column="43" selection-start="3612" selection-end="3612" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="48" selection-start="2420" selection-end="2420" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1103,7 +1107,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="29" selection-start="3469" selection-end="3469" vertical-scroll-proportion="0.4100295">
+        <state line="91" column="45" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.32448378">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
