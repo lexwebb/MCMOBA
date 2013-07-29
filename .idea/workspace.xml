@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0802b737-86ca-4c1a-9128-4a17019a7b2f" name="Default" comment="Update">
-      <change type="DELETED" beforePath="C:\Users\Lex\Documents\GitHub\MCMOBA\.idea\libraries\Maven__org_bukkit_bukkit_1_6_1_R0_1_SNAPSHOT.xml" afterPath="" />
+    <list default="true" id="0802b737-86ca-4c1a-9128-4a17019a7b2f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MCMOBA.iml" afterPath="$PROJECT_DIR$/MCMOBA.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MCMOBA.iws" />
@@ -17,8 +16,8 @@
     <file path="/PlayerClass.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373819611430" ignored="false" />
     <file path="/Ability.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373822689392" ignored="false" />
     <file path="/LeapLis.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373327283840" ignored="false" />
-    <file path="/Dummy.txt" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375052600337" ignored="false" />
-    <file path="/PlayerLogLis.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373583011996" ignored="false" />
+    <file path="/Dummy.txt" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375052725258" ignored="false" />
+    <file path="/PlayerLogLis.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375053033687" ignored="false" />
     <file path="/Spectaor.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373407566234" ignored="false" />
     <file path="/Spectator.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373834800686" ignored="false" />
     <file path="/plugin.yml" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373581121392" ignored="false" />
@@ -30,6 +29,7 @@
     <file path="/EarthWall.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1374002791503" ignored="false" />
     <file path="/EarthMissile.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375048079884" ignored="false" />
     <file path="/EarthWarrior.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375020822489" ignored="false" />
+    <file path="/EarthLeap.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375055050646" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,10 +90,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="19" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EarthMissile.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="47" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+            <state line="114" column="35" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,13 +110,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EarthSlam.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AbilityLis.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/AbilityLis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="51" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EarthSlam.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="64" selection-start="975" selection-end="975" vertical-scroll-proportion="1.1504425">
+            <state line="89" column="53" selection-start="2906" selection-end="2906" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerLogLis.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="52" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,16 +142,18 @@
       <file leaf-file-name="EarthLeap.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="40" selection-start="325" selection-end="325" vertical-scroll-proportion="-6.2">
-              <folding />
+            <state line="37" column="39" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EarthSmash.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="EarthSmash.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="63" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
+            <state line="98" column="29" selection-start="3469" selection-end="3469" vertical-scroll-proportion="0.4100295">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,19 +170,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="Ability.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="76" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
+            <state line="32" column="120" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ability.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java">
+      <file leaf-file-name="PlayerClass.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="31" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.0">
+            <state line="77" column="97" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -178,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Leap.java" />
@@ -189,9 +217,10 @@
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/IceWall.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/defaults/Utilities.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/EarthWarrior.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java" />
       </list>
@@ -852,7 +881,11 @@
       <created>1375051136775</created>
       <updated>1375051136775</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update">
+      <created>1375052729638</created>
+      <updated>1375052729638</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -955,34 +988,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/interfaces/SelfCastable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="207" selection-end="207" vertical-scroll-proportion="0.24096386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/interfaces/IAreaOfEffect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="171" selection-end="171" vertical-scroll-proportion="0.24096386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/interfaces/IAbility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="252" selection-end="252" vertical-scroll-proportion="0.42168674">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/CastType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="19" selection-start="215" selection-end="215" vertical-scroll-proportion="0.42168674">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Attribute.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="12" selection-start="97" selection-end="97" vertical-scroll-proportion="0.18072289">
@@ -1020,13 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="31" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="76" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
@@ -1041,16 +1039,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="40" selection-start="325" selection-end="325" vertical-scroll-proportion="-6.2">
+        <state line="77" column="97" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="63" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
+        <state line="20" column="19" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="52" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="120" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/AbilityLis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="51" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="53" selection-start="2906" selection-end="2906" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="39" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1059,16 +1094,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="47" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0">
+        <state line="114" column="35" selection-start="3994" selection-end="3994" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="64" selection-start="975" selection-end="975" vertical-scroll-proportion="1.1504425">
+        <state line="98" column="29" selection-start="3469" selection-end="3469" vertical-scroll-proportion="0.4100295">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

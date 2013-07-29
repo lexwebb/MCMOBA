@@ -48,28 +48,28 @@ public class EarthMissile extends Ability{
         String direction = utils.getCardinalDirection(player);
         switch (utils.getCardinalDirection(player)){
             case "N":
-                block = player.getWorld().getBlockAt(player.getLocation().add(-1,0,0));
+                block = player.getWorld().getBlockAt(player.getLocation().add(-1,-1,0));
                 break;
             case "NE":
-                block = player.getWorld().getBlockAt(player.getLocation().add(-1,0,-1));
+                block = player.getWorld().getBlockAt(player.getLocation().add(-1,-1,-1));
                 break;
             case "E":
-                block = player.getWorld().getBlockAt(player.getLocation().add(0,0,-1));
+                block = player.getWorld().getBlockAt(player.getLocation().add(0,-1,-1));
                 break;
             case "SE":
-                block = player.getWorld().getBlockAt(player.getLocation().add(1,0,-1));
+                block = player.getWorld().getBlockAt(player.getLocation().add(1,-1,-1));
                 break;
             case "S":
-                block = player.getWorld().getBlockAt(player.getLocation().add(1,0,0));
+                block = player.getWorld().getBlockAt(player.getLocation().add(1,-1,0));
                 break;
             case "SW":
-                block = player.getWorld().getBlockAt(player.getLocation().add(1,0,1));
+                block = player.getWorld().getBlockAt(player.getLocation().add(1,-1,1));
                 break;
             case "W":
-                block = player.getWorld().getBlockAt(player.getLocation().add(0,0,1));
+                block = player.getWorld().getBlockAt(player.getLocation().add(0,-1,1));
                 break;
             case "NW":
-                block = player.getWorld().getBlockAt(player.getLocation().add(-1,0,1));
+                block = player.getWorld().getBlockAt(player.getLocation().add(-1,-1,1));
                 break;
         }
 
@@ -103,7 +103,7 @@ public class EarthMissile extends Ability{
                             && b.getType() != Material.STATIONARY_WATER){
                         m = b.getType();
                         bi = b.getData();
-                        b.setType(Material.AIR);
+                       // b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.DOWN);
@@ -116,7 +116,7 @@ public class EarthMissile extends Ability{
                             || b.getRelative(BlockFace.UP).getType() == Material.STATIONARY_WATER){
                         m = b.getType();
                         bi = b.getData();
-                        b.setType(Material.AIR);
+                        //b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.UP);

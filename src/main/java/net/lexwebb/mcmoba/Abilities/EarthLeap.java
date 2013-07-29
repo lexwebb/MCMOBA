@@ -20,7 +20,7 @@ public class EarthLeap extends Ability {
 
     int taskID;
     public EarthLeap(Player player){
-        super(player, "EarthLeap", false, true, 5, false, false);
+        super(player, "EarthLeap", false, true, 5, false, true);
 
     }
 

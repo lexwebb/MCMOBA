@@ -64,7 +64,7 @@ public class EarthSmash extends Ability{
                     if(b.getRelative(BlockFace.DOWN).getTypeId() != 0){
                         m = b.getType();
                         bi = b.getData();
-                        b.setType(Material.AIR);
+                        //b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.DOWN);
@@ -73,7 +73,7 @@ public class EarthSmash extends Ability{
                     if(b.getRelative(BlockFace.UP).getTypeId() == 0){
                         m = b.getType();
                         bi = b.getData();
-                        b.setType(Material.AIR);
+                        //b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.UP);
