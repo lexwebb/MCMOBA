@@ -2,6 +2,7 @@ package net.lexwebb.mcmoba;
 
 import net.lexwebb.mcmoba.Classes.PlayerClass;
 import net.lexwebb.mcmoba.listeners.AbilityLis;
+import net.lexwebb.mcmoba.listeners.EntityLis;
 import net.lexwebb.mcmoba.listeners.PlayerLogLis;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
@@ -24,6 +25,7 @@ public final class Main extends JavaPlugin {
 
     public final AbilityLis abilityLis = new AbilityLis(this);
     public final PlayerLogLis logLis = new PlayerLogLis(this);
+    public final EntityLis entLis = new EntityLis(this);
 
     public final List<Player> players = new ArrayList<>();
     public final HashMap<Player, PlayerClass> playerClass = new HashMap<>();
@@ -33,6 +35,7 @@ public final class Main extends JavaPlugin {
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(abilityLis, this);
         pm.registerEvents(logLis, this);
+        pm.registerEvents(entLis, this);
         instance = this;
     }
 
