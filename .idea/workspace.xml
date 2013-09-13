@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0802b737-86ca-4c1a-9128-4a17019a7b2f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_kumpelblase2_remoteentities_1_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/EarthWarrior.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/EarthWarrior.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/EntityLis.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/EntityLis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MCMOBA.iml" afterPath="$PROJECT_DIR$/MCMOBA.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Main.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/WaterMage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MCMOBA.iws" />
@@ -22,16 +11,16 @@
     <file path="/AbilityLis.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373835464487" ignored="false" />
     <file path="/Class.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373321441576" ignored="false" />
     <file path="/PlayerClass.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379043462666" ignored="false" />
-    <file path="/Ability.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373822689392" ignored="false" />
+    <file path="/Ability.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379101955550" ignored="false" />
     <file path="/LeapLis.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373327283840" ignored="false" />
-    <file path="/Dummy.txt" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379044501302" ignored="false" />
+    <file path="/Dummy.txt" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379102061525" ignored="false" />
     <file path="/PlayerLogLis.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379050026066" ignored="false" />
     <file path="/Spectaor.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373407566234" ignored="false" />
     <file path="/Spectator.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373834800686" ignored="false" />
     <file path="/plugin.yml" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373581121392" ignored="false" />
     <file path="/pom.xml" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373633483477" ignored="false" />
     <file path="/Leap.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373833177484" ignored="false" />
-    <file path="/fragment.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1373829943571" ignored="false" />
+    <file path="/fragment.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379101739861" ignored="false" />
     <file path="/EarthSlam.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379045854265" ignored="false" />
     <file path="/EarthSmash.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379046128552" ignored="false" />
     <file path="/EarthWall.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1374002791503" ignored="false" />
@@ -43,6 +32,7 @@
     <file path="/FireVortex.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375729891777" ignored="false" />
     <file path="/FireMage.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375650682478" ignored="false" />
     <file path="/ParticleEffect.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1375728030881" ignored="false" />
+    <file path="/Dummy.java" changelist="0802b737-86ca-4c1a-9128-4a17019a7b2f" time="1379101777777" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +47,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -93,7 +84,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -103,10 +93,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlayerLogLis.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java">
+      <file leaf-file-name="PlayerClass.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="36" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.0">
+            <state line="30" column="18" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FireMage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/FireMage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="5" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WaterMage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/WaterMage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="42" selection-start="440" selection-end="440" vertical-scroll-proportion="0.43956044">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dummy.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Dummy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="8" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,79 +132,43 @@
       <file leaf-file-name="FireVortex.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/FireVortex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="48" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.0">
+            <state line="28" column="41" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EarthWarrior.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/EarthWarrior.java">
+      <file leaf-file-name="Ability.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="23" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0">
+            <state line="17" column="14" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityLis.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/EntityLis.java">
+      <file leaf-file-name="Rogue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Rogue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="52" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.33729216">
+            <state line="12" column="13" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utilities.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/defaults/Utilities.java">
+      <file leaf-file-name="Ranger.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Ranger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="49" selection-start="1416" selection-end="1441" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Main.java">
+      <file leaf-file-name="Tank.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Tank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="79" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EarthSlam.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSlam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="31" selection-start="4299" selection-end="4299" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EarthMissile.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="40" selection-start="3959" selection-end="3959" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EarthSmash.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthSmash.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="28" selection-start="1990" selection-end="2873" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbilityLis.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/AbilityLis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="16" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+            <state line="21" column="5" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,13 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/IceWall.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthLeap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/interfaces/FireVortex.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/FireMage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/defaults/Utilities.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/defaults/ParticleEffect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/FireVortex.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/EarthWarrior.java" />
@@ -228,6 +202,13 @@
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/EarthMissile.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/EntityLis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Rogue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Ranger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Tank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/WaterMage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Dummy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/FireVortex.java" />
       </list>
     </option>
   </component>
@@ -244,10 +225,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1301" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -275,6 +256,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -463,8 +446,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -476,21 +457,22 @@
     <property name="options.lastSelected" value="MavenSettings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../java" />
+    <property name="last_opened_file_path" value="$USER_HOME$/java" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.lexwebb.mcmoba.Abilities" />
+      <recent name="net.lexwebb.mcmoba.Classes" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lex\Documents\GitHub\MCMOBA\src\main\java\net\lexwebb\mcmoba\Abilities" />
@@ -533,6 +515,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -558,19 +553,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -737,32 +719,37 @@
       <created>1375083277334</created>
       <updated>1375083277334</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added base classes">
+      <created>1379102074562</created>
+      <updated>1379102074562</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328807" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2045977" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31954023" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31871837" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16401468" sideWeight="0.6808756" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24261771" sideWeight="0.67116356" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31912443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDE talk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -809,7 +796,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added possible fix to EarthSmash" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added base classes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -833,6 +820,7 @@
     <MESSAGE value="Update" />
     <MESSAGE value="Fixed crash error" />
     <MESSAGE value="Added possible fix to EarthSmash" />
+    <MESSAGE value="Added base classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -842,76 +830,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/FireMage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/defaults/ParticleEffect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="55" selection-start="4459" selection-end="4459" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="36" selection-start="1763" selection-end="1781" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/bukkit/bukkit/1.6.2-R0.1/bukkit-1.6.2-R0.1.jar!/org/bukkit/inventory/ItemStack.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="25" selection-start="529" selection-end="529" vertical-scroll-proportion="-10.08">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="46" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/EarthWarrior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="23" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="79" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/AbilityLis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="16" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/FireVortex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="48" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/PlayerLogLis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="36" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.0">
@@ -949,7 +867,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/listeners/EntityLis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="52" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.33729216">
+        <state line="51" column="20" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.23280424">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/EarthWarrior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="23" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.63492066">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/FireMage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/PlayerClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="18" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Rogue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Ranger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/Tank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="5" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Dummy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="8" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/Ability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="14" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Abilities/FireVortex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="41" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lexwebb/mcmoba/Classes/WaterMage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="42" selection-start="440" selection-end="440" vertical-scroll-proportion="0.43956044">
           <folding />
         </state>
       </provider>
