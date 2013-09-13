@@ -30,7 +30,6 @@ public class FireVortex extends Ability {
         super(player, "FireVortex", false, true, 5, false, true);
 
     }
-
     @Override
     public void playerEffect(){
 

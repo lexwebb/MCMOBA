@@ -1,6 +1,6 @@
 package net.lexwebb.mcmoba.Classes;
 
-import net.lexwebb.mcmoba.Abilities.*;
+import net.lexwebb.mcmoba.Abilities.FireVortex;
 import org.bukkit.entity.Player;
 
 /**
@@ -10,9 +10,9 @@ import org.bukkit.entity.Player;
  * Time: 22:09
  * To change this template use File | Settings | File Templates.
  */
-public class FireMage extends PlayerClass{
+public class Rogue extends PlayerClass{
 
-    public FireMage(Player player) {
+    public Rogue(Player player) {
         super(player, 1, 0, 0, "Fire");
 
         ability1 = new FireVortex(player);
