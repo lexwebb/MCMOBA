@@ -1,5 +1,6 @@
 package net.lexwebb.mcmoba.Classes;
 
+import net.lexwebb.mcmoba.Abilities.Dummy;
 import net.lexwebb.mcmoba.Abilities.FireVortex;
 import org.bukkit.entity.Player;
 
@@ -13,11 +14,11 @@ import org.bukkit.entity.Player;
 public class Rogue extends PlayerClass{
 
     public Rogue(Player player) {
-        super(player, 1, 0, 0, "Fire");
+        super(player, 1, 0, 0, "Perfidus");
 
-        ability1 = new FireVortex(player);
-        ability2 = new FireVortex(player);
-        ability3 = new FireVortex(player);
-        ability4 = new FireVortex(player);
+        ability1 = new Dummy(player);
+        ability2 = new Dummy(player);
+        ability3 = new Dummy(player);
+        ability4 = new Dummy(player);
     }
 }

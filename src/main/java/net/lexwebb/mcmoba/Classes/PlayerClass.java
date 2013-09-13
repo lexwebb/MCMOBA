@@ -12,6 +12,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 /**
  * Created with IntelliJ IDEA.
@@ -72,6 +73,13 @@ public abstract class PlayerClass extends DefaultListener{
         player.getInventory().setItem(1, slot2);
         player.getInventory().setItem(2, slot3);
         player.getInventory().setItem(3, slot4);
+
+        ItemStack menu = new ItemStack(Material.BOOK);
+        ItemMeta meta = menu.getItemMeta();
+        meta.setDisplayName("Menu");
+        menu.setItemMeta(meta);
+
+        player.getInventory().setItem(8, menu);
     }
 
     public void onAbilityOne(){

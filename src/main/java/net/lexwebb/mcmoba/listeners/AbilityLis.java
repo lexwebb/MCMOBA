@@ -34,6 +34,7 @@ public class AbilityLis extends DefaultListener{
                 case 1: Main.instance.playerClass.get(e.getPlayer()).onAbilityTwo(); e.setCancelled(true); break;
                 case 2: Main.instance.playerClass.get(e.getPlayer()).onAbilityThree(); e.setCancelled(true); break;
                 case 3: Main.instance.playerClass.get(e.getPlayer()).onAbilityFour(); e.setCancelled(true); break;
+                case 8: Main.instance.menu.open(e.getPlayer());
             }
         } else {
 
