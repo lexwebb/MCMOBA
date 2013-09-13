@@ -91,32 +91,18 @@ public class EarthMissile extends Ability{
         public void run() {
             boolean topBlock = false;
             while(!topBlock){
-                if(b.getType() == Material.AIR
-                        || b.getType() == Material.SNOW
-                        || b.getType() == Material.ICE
-                        || b.getType() == Material.WATER
-                        || b.getType() == Material.STATIONARY_WATER){
-                    if(b.getRelative(BlockFace.DOWN).getTypeId() != 0
-                            && b.getType() != Material.SNOW
-                            && b.getType() != Material.ICE
-                            && b.getType() != Material.WATER
-                            && b.getType() != Material.STATIONARY_WATER){
-                        m = b.getType();
-                        bi = b.getData();
-                        b.setType(Material.AIR);
+                if(b.getType().isSolid() == false){
+                    if(b.getRelative(BlockFace.DOWN).getType().isSolid()){
+                        m = b.getRelative(BlockFace.DOWN).getType();
+                        bi = b.getRelative(BlockFace.DOWN).getData();
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.DOWN);
                     }
                 } else {
-                    if(b.getRelative(BlockFace.UP).getTypeId() == 0
-                            ||b.getRelative(BlockFace.UP).getType() == Material.SNOW
-                            || b.getRelative(BlockFace.UP).getType() == Material.ICE
-                            || b.getRelative(BlockFace.UP).getType() == Material.WATER
-                            || b.getRelative(BlockFace.UP).getType() == Material.STATIONARY_WATER){
+                    if(b.getRelative(BlockFace.UP).getType().isSolid() == false){
                         m = b.getType();
                         bi = b.getData();
-                        b.setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.UP);
@@ -125,9 +111,12 @@ public class EarthMissile extends Ability{
             }
 
             fallingblock = b.getWorld().spawnFallingBlock(b.getLocation(), m, bi);
+            Main.instance.thrownBlock.add(fallingblock);
             fallingblock.setVelocity(new Vector(0, 0.6, 0));
 
             fallingblock.getWorld().playSound(fallingblock.getLocation(), Sound.DIG_STONE, 5, 1);
+            b.setType(m);
+            b.setData(bi);
         }
     }
 
@@ -141,7 +130,7 @@ public class EarthMissile extends Ability{
         @Override
         public void run() {
             Vector v = player.getLocation().getDirection();
-            v.setY(0);
+            //v.setY(0);
             v = v.multiply(3);
 
             fallingblock.setVelocity(v);

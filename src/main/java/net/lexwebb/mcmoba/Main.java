@@ -4,6 +4,7 @@ import net.lexwebb.mcmoba.Classes.PlayerClass;
 import net.lexwebb.mcmoba.listeners.AbilityLis;
 import net.lexwebb.mcmoba.listeners.EntityLis;
 import net.lexwebb.mcmoba.listeners.PlayerLogLis;
+import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -29,6 +30,7 @@ public final class Main extends JavaPlugin {
 
     public final List<Player> players = new ArrayList<>();
     public final HashMap<Player, PlayerClass> playerClass = new HashMap<>();
+    public final List<FallingBlock> thrownBlock = new ArrayList<>();
 
     @Override
     public void onEnable() {

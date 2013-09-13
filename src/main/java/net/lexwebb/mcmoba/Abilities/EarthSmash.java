@@ -60,17 +60,17 @@ public class EarthSmash extends Ability{
         public void run() {
             boolean topBlock = false;
             while(!topBlock){
-                if(b.getType() == Material.AIR){
-                    if(b.getRelative(BlockFace.DOWN).getTypeId() != 0){
-                        m = b.getType();
-                        bi = b.getData();
-                        b.setType(Material.AIR);
+                if(b.getType().isSolid() == false){
+                    if(b.getRelative(BlockFace.DOWN).getType().isSolid()){
+                        m = b.getRelative(BlockFace.DOWN).getType();
+                        bi = b.getRelative(BlockFace.DOWN).getData();
+                        b.getRelative(BlockFace.DOWN).setType(Material.AIR);
                         topBlock = true;
                     } else {
                         b = b.getRelative(BlockFace.DOWN);
                     }
                 } else {
-                    if(b.getRelative(BlockFace.UP).getTypeId() == 0){
+                    if(b.getRelative(BlockFace.UP).getType().isSolid() == false){
                         m = b.getType();
                         bi = b.getData();
                         b.setType(Material.AIR);

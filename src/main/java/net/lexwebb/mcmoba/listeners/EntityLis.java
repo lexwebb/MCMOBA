@@ -1,14 +1,26 @@
 package net.lexwebb.mcmoba.listeners;
 
+import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
+import net.lexwebb.mcmoba.defaults.Utilities;
 import org.bukkit.Effect;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.EntityBlockFormEvent;
+import org.bukkit.event.entity.EntityChangeBlockEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.EntityInteractEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.EventListener;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,4 +40,35 @@ public class EntityLis extends DefaultListener {
             e.getEntity().getWorld().playEffect(e.getEntity().getLocation(), Effect.STEP_SOUND, Material.REDSTONE_WIRE);
         }
     }
+
+    @EventHandler
+    public void onPlayerMove(PlayerMoveEvent e){
+        if(e.getPlayer().getWorld().getBlockAt(e.getPlayer().getLocation()).getType().isSolid()){
+            e.getPlayer().teleport(e.getPlayer().getLocation().add(0,1,0));
+        }
+    }
+
+    @EventHandler
+    public void blockLandEvent(EntityChangeBlockEvent e){
+        if(Main.instance.thrownBlock.contains(e.getEntity())){
+            //Main.instance.getServer().broadcastMessage("Falling Block Destroyed");  //debug
+            e.getEntity().getWorld().createExplosion(e.getEntity().getLocation(), 0, false);
+            Location loc = e.getEntity().getLocation();
+            e.setCancelled(true);
+
+
+            Utilities util = new Utilities();
+
+            List<Entity> entList = util.getNearbyLocationEntities(Main.instance.players.get(0), loc, 3);
+            for(Entity entity : entList){
+                ((LivingEntity) entity).damage(6);
+            }
+        }
+    }
+
+    @EventHandler
+    public void onPlayerDeath(PlayerRespawnEvent e){
+        Main.instance.playerClass.get(e.getPlayer()).setItemSlots();
+    }
+
 }

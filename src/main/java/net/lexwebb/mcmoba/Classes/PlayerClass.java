@@ -5,11 +5,13 @@ import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
 
 /**
  * Created with IntelliJ IDEA.
@@ -38,6 +40,11 @@ public abstract class PlayerClass extends DefaultListener{
     int AThreeTaskId;
     int AFourTaskId;
 
+    public ItemStack slot1 = new ItemStack(Material.ARROW);
+    public ItemStack slot2 = new ItemStack(Material.ARROW);
+    public ItemStack slot3 = new ItemStack(Material.ARROW);
+    public ItemStack slot4 = new ItemStack(Material.ARROW);
+
     public PlayerClass(Player player, double baseHealth, double baseMana, int baseDamage, String type){
         super(Main.instance);
         this.player = player;
@@ -48,6 +55,8 @@ public abstract class PlayerClass extends DefaultListener{
         this.currentMana = baseMana;
         this.baseDamage = baseDamage;
         this.type = type;
+
+        setItemSlots();
     }
 
     public void onRightClick(){
@@ -56,6 +65,13 @@ public abstract class PlayerClass extends DefaultListener{
 
     public void onLeftClick(){
 
+    }
+
+    public void setItemSlots(){
+        player.getInventory().setItem(0, slot1);
+        player.getInventory().setItem(1, slot2);
+        player.getInventory().setItem(2, slot3);
+        player.getInventory().setItem(3, slot4);
     }
 
     public void onAbilityOne(){

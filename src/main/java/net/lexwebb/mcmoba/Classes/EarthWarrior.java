@@ -4,7 +4,11 @@ import net.lexwebb.mcmoba.Abilities.EarthMissile;
 import net.lexwebb.mcmoba.Abilities.EarthSlam;
 import net.lexwebb.mcmoba.Abilities.EarthSmash;
 import net.lexwebb.mcmoba.Abilities.EarthLeap;
+import org.bukkit.Bukkit;
+import org.bukkit.DyeColor;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,5 +26,11 @@ public class EarthWarrior extends PlayerClass {
         ability2 = new EarthSlam(player);
         ability3 = new EarthSmash(player);
         ability4 = new EarthMissile(player);
+
+        slot1 = new ItemStack(Material.INK_SACK, 1, (short)2);
+        slot4 = new ItemStack(Material.SLIME_BALL, 1);
+        slot3 = new ItemStack(Material.EMERALD, 1);
+        slot2 = new ItemStack(2260, 1); //Record-Far
+        setItemSlots();
     }
 }
