@@ -1,6 +1,6 @@
 package net.lexwebb.mcmoba;
 
-import net.lexwebb.mcmoba.Classes.PlayerClass;
+import net.lexwebb.mcmoba.Classes.*;
 import net.lexwebb.mcmoba.defaults.IconMenu;
 import net.lexwebb.mcmoba.listeners.AbilityLis;
 import net.lexwebb.mcmoba.listeners.EntityLis;
@@ -45,19 +45,41 @@ public final class Main extends JavaPlugin {
         pm.registerEvents(entLis, this);
         instance = this;
 
-        menu = new IconMenu("Classes", 6, new IconMenu.OptionClickEventHandler() {
+        menu = new IconMenu("Classes", 9, new IconMenu.OptionClickEventHandler() {
             @Override
             public void onOptionClick(IconMenu.OptionClickEvent event) {
                 event.getPlayer().sendMessage("You have chosen " + event.getName());
                 event.setWillClose(true);
+                switch (event.getPosition()) {
+                    case 0: Main.instance.playerClass.remove(event.getPlayer());
+                        Main.instance.playerClass.put(event.getPlayer(), new FireMage(event.getPlayer()));
+                        break;
+                    case 1: Main.instance.playerClass.remove(event.getPlayer());
+                        Main.instance.playerClass.put(event.getPlayer(), new WaterMage(event.getPlayer()));
+                        break;
+                    case 2: Main.instance.playerClass.remove(event.getPlayer());
+                        Main.instance.playerClass.put(event.getPlayer(), new EarthWarrior(event.getPlayer()));
+                        break;
+                    case 3: Main.instance.playerClass.remove(event.getPlayer());
+                        Main.instance.playerClass.put(event.getPlayer(), new Rogue(event.getPlayer()));
+                        break;
+                    case 4: Main.instance.playerClass.remove(event.getPlayer());
+                        Main.instance.playerClass.put(event.getPlayer(), new Ranger(event.getPlayer()));
+                        break;
+                    case 5: Main.instance.playerClass.remove(event.getPlayer());
+                        Main.instance.playerClass.put(event.getPlayer(), new Tank(event.getPlayer()));
+                        break;
+                }
+
+                Main.instance.playerClass.get(event.getPlayer().getPlayer()).setItemSlots();
             }
         }, this)
-                .setOption(1, new ItemStack(Material.FIRE, 1), "Ignibus", "Fire Mage")
-                .setOption(2, new ItemStack(Material.WATER_BUCKET, 1), "Aquam", "Water Mage")
-                .setOption(3, new ItemStack(Material.GRASS, 1), "Terram", "Earth Warrior")
-                .setOption(4, new ItemStack(Material.IRON_SWORD, 1), "Perfidus", "Rogue")
-                .setOption(5, new ItemStack(Material.ARROW, 1), "Arcus", "Ranger")
-                .setOption(6, new ItemStack(Material.IRON_CHESTPLATE, 1), "Saxum", "Heavy Warrior");
+                .setOption(0, new ItemStack(Material.FIRE, 1), "Ignibus", "Fire Mage")
+                .setOption(1, new ItemStack(Material.WATER_BUCKET, 1), "Aquam", "Water Mage")
+                .setOption(2, new ItemStack(Material.GRASS, 1), "Terram", "Earth Warrior")
+                .setOption(3, new ItemStack(Material.IRON_SWORD, 1), "Perfidus", "Rogue")
+                .setOption(4, new ItemStack(Material.ARROW, 1), "Arcus", "Ranger")
+                .setOption(5, new ItemStack(Material.IRON_CHESTPLATE, 1), "Saxum", "Heavy Warrior");
     }
 
     @Override

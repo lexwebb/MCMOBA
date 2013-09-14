@@ -3,6 +3,10 @@ package net.lexwebb.mcmoba.Classes;
 import net.lexwebb.mcmoba.Abilities.Ability;
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
+import net.minecraft.server.v1_6_R2.EntityPlayer;
+import net.minecraft.server.v1_6_R2.IInventory;
+import net.minecraft.server.v1_6_R2.Packet103SetSlot;
+import net.minecraft.server.v1_6_R2.Slot;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -57,6 +61,8 @@ public abstract class PlayerClass extends DefaultListener{
         this.baseDamage = baseDamage;
         this.type = type;
 
+        player.sendMessage("You are " + type);
+
         setItemSlots();
     }
 
@@ -80,6 +86,8 @@ public abstract class PlayerClass extends DefaultListener{
         menu.setItemMeta(meta);
 
         player.getInventory().setItem(8, menu);
+
+        player.getInventory().setHeldItemSlot(4);
     }
 
     public void onAbilityOne(){

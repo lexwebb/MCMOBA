@@ -30,11 +30,24 @@ public class AbilityLis extends DefaultListener{
         int slot = e.getNewSlot();
         if(Main.instance.playerClass.containsKey(e.getPlayer())){
             switch (slot) {
-                case 0: Main.instance.playerClass.get(e.getPlayer()).onAbilityOne(); e.setCancelled(true); break;
-                case 1: Main.instance.playerClass.get(e.getPlayer()).onAbilityTwo(); e.setCancelled(true); break;
-                case 2: Main.instance.playerClass.get(e.getPlayer()).onAbilityThree(); e.setCancelled(true); break;
-                case 3: Main.instance.playerClass.get(e.getPlayer()).onAbilityFour(); e.setCancelled(true); break;
-                case 8: Main.instance.menu.open(e.getPlayer());
+                case 0: Main.instance.playerClass.get(e.getPlayer()).onAbilityOne();
+                    e.setCancelled(true); break;
+                case 1: Main.instance.playerClass.get(e.getPlayer()).onAbilityTwo();
+                    e.setCancelled(true); break;
+                case 2: Main.instance.playerClass.get(e.getPlayer()).onAbilityThree();
+                    e.setCancelled(true); break;
+                case 3: Main.instance.playerClass.get(e.getPlayer()).onAbilityFour();
+                    e.setCancelled(true); break;
+                case 4: //weapon default selected
+                    break;
+                case 5:
+                    e.setCancelled(true); break;
+                case 6:
+                    e.setCancelled(true); break;
+                case 7:
+                    e.setCancelled(true); break;
+                case 8: Main.instance.menu.open(e.getPlayer()); e.getPlayer().sendMessage("Opened Menu");
+                    e.setCancelled(true); break;
             }
         } else {
 
