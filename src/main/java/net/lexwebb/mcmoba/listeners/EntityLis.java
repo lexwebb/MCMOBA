@@ -1,8 +1,10 @@
 package net.lexwebb.mcmoba.listeners;
 
+import net.lexwebb.mcmoba.Abilities.Events.EntityCollideEvent;
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
 import net.lexwebb.mcmoba.defaults.Utilities;
+import org.bukkit.Bukkit;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -72,6 +74,11 @@ public class EntityLis extends DefaultListener {
     @EventHandler
     public void onPlayerDeath(PlayerRespawnEvent e){
         Main.instance.playerClass.get(e.getPlayer()).setItemSlots();
+    }
+
+    @EventHandler
+    public void onEntityCollide(EntityCollideEvent e){
+        Bukkit.getServer().broadcastMessage(e.getEntity1().getEntityId() + " collided with " + e.getEntity2().getEntityId());
     }
 
 }
