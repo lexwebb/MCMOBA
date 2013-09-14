@@ -2,6 +2,8 @@ package net.lexwebb.mcmoba.listeners;
 
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
+import org.bukkit.Material;
+import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
@@ -65,6 +67,10 @@ public class AbilityLis extends DefaultListener{
         Action eAction = e.getAction();
         if (eAction.equals(Action.RIGHT_CLICK_AIR) || eAction.equals(Action.RIGHT_CLICK_BLOCK)) {
             Main.instance.playerClass.get(e.getPlayer()).onRightClick();
+
+            if(e.getPlayer().getItemInHand().getType() == Material.WOOD_SWORD) {
+                e.getPlayer().launchProjectile(Fireball.class);
+            }
         } else if(eAction.equals(Action.LEFT_CLICK_AIR) || eAction.equals(Action.LEFT_CLICK_BLOCK)) {
             Main.instance.playerClass.get(e.getPlayer()).onLeftClick();
         }

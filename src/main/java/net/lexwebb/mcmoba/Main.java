@@ -1,10 +1,12 @@
 package net.lexwebb.mcmoba;
 
+import net.lexwebb.mcmoba.Abilities.Events.EntityPosChecker;
 import net.lexwebb.mcmoba.Classes.*;
 import net.lexwebb.mcmoba.defaults.IconMenu;
 import net.lexwebb.mcmoba.listeners.AbilityLis;
 import net.lexwebb.mcmoba.listeners.EntityLis;
 import net.lexwebb.mcmoba.listeners.PlayerLogLis;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.Player;
@@ -44,6 +46,9 @@ public final class Main extends JavaPlugin {
         pm.registerEvents(logLis, this);
         pm.registerEvents(entLis, this);
         instance = this;
+
+        //initialise posChecker
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new EntityPosChecker(), 0, 1);
 
         menu = new IconMenu("Classes", 9, new IconMenu.OptionClickEventHandler() {
             @Override

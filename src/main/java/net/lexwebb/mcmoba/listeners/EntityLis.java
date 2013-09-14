@@ -61,8 +61,11 @@ public class EntityLis extends DefaultListener {
 
             List<Entity> entList = util.getNearbyLocationEntities(Main.instance.players.get(0), loc, 3);
             for(Entity entity : entList){
-                ((LivingEntity) entity).damage(6);
+                if(entity instanceof LivingEntity)
+                    ((LivingEntity) entity).damage(6);
             }
+
+            Main.instance.thrownBlock.remove(e.getEntity());
         }
     }
 
