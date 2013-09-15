@@ -1,13 +1,12 @@
 package net.lexwebb.mcmoba.listeners;
 
+import com.bergerkiller.bukkit.common.events.EntityMoveEvent;
 import net.lexwebb.mcmoba.Abilities.Events.EntityCollideEvent;
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
 import net.lexwebb.mcmoba.defaults.Utilities;
-import org.bukkit.Bukkit;
-import org.bukkit.Effect;
-import org.bukkit.Location;
-import org.bukkit.Material;
+import org.bukkit.*;
+import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.entity.LivingEntity;
@@ -51,8 +50,40 @@ public class EntityLis extends DefaultListener {
     }
 
     @EventHandler
+    public void onEntityMove(EntityMoveEvent e){
+        if(Main.instance.thrownBlock.containsKey(e.getEntity())){
+            //Bukkit.getServer().broadcastMessage("Moved");
+            List <Entity> entList = e.getEntity().getNearbyEntities(1, 1 ,1);
+            Boolean collided = false;
+            for(Entity entity: entList){
+                if(entity instanceof LivingEntity && entity != Main.instance.thrownBlock.get(e.getEntity())){
+                    collided = true;
+                }
+            }
+
+            if(collided){
+                //Bukkit.getServer().broadcastMessage(e.getEntity().getEntityId() + " collided");
+
+                e.getEntity().getWorld().createExplosion(e.getEntity().getLocation(), 0, false);
+                Location loc = e.getEntity().getLocation();
+
+                Utilities util = new Utilities();
+
+                List<Entity> entityList = util.getNearbyLocationEntities(Main.instance.players.get(0), loc, 3);
+                for(Entity entity : entityList){
+                    if(entity instanceof LivingEntity)
+                        ((LivingEntity) entity).damage(6);
+                }
+
+                Main.instance.thrownBlock.remove(e.getEntity());
+                e.getEntity().remove();
+            }
+        }
+    }
+
+    @EventHandler
     public void blockLandEvent(EntityChangeBlockEvent e){
-        if(Main.instance.thrownBlock.contains(e.getEntity())){
+        if(Main.instance.thrownBlock.containsKey(e.getEntity())){
             //Main.instance.getServer().broadcastMessage("Falling Block Destroyed");  //debug
             e.getEntity().getWorld().createExplosion(e.getEntity().getLocation(), 0, false);
             Location loc = e.getEntity().getLocation();
@@ -75,6 +106,8 @@ public class EntityLis extends DefaultListener {
     public void onPlayerDeath(PlayerRespawnEvent e){
         Main.instance.playerClass.get(e.getPlayer()).setItemSlots();
     }
+
+
 
     @EventHandler
     public void onEntityCollide(EntityCollideEvent e){

@@ -111,7 +111,7 @@ public class EarthMissile extends Ability{
             }
 
             fallingblock = b.getWorld().spawnFallingBlock(b.getLocation(), m, bi);
-            Main.instance.thrownBlock.add(fallingblock);
+            Main.instance.thrownBlock.put(fallingblock, player);
             fallingblock.setVelocity(new Vector(0, 0.6, 0));
 
             fallingblock.getWorld().playSound(fallingblock.getLocation(), Sound.DIG_STONE, 5, 1);

@@ -17,6 +17,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -35,7 +36,9 @@ public final class Main extends JavaPlugin {
 
     public final List<Player> players = new ArrayList<>();
     public final HashMap<Player, PlayerClass> playerClass = new HashMap<>();
-    public final List<FallingBlock> thrownBlock = new ArrayList<>();
+    //public final List<FallingBlock> thrownBlock = new ArrayList<>();
+
+    public final HashMap<FallingBlock, Player> thrownBlock = new HashMap<>();
 
     public IconMenu menu;
 
@@ -46,9 +49,6 @@ public final class Main extends JavaPlugin {
         pm.registerEvents(logLis, this);
         pm.registerEvents(entLis, this);
         instance = this;
-
-        //initialise posChecker
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new EntityPosChecker(), 0, 1);
 
         menu = new IconMenu("Classes", 9, new IconMenu.OptionClickEventHandler() {
             @Override

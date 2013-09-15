@@ -52,6 +52,12 @@
             <artifactId>remoteentities</artifactId>
             <version>1.7</version>
         </dependency>
+        <dependency>
+            <groupId>com.bergerkiller.bukkit</groupId>
+            <artifactId>BKCommonLib</artifactId>
+            <version>1.54</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <description>Minecraft MOBA</description>
