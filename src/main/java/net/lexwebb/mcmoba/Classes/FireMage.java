@@ -12,8 +12,8 @@ import org.bukkit.entity.Player;
  */
 public class FireMage extends PlayerClass{
 
-    public FireMage(Player player) {
-        super(player, 1, 0, 0, "Ignibus");
+    public FireMage(Player player, int team) {
+        super(player, team, 20, 200, 0, "Ignibus");
 
         ability1 = new FireVortex(player);
         ability2 = new Dummy(player);

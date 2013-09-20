@@ -13,8 +13,8 @@ import org.bukkit.entity.Player;
  */
 public class Rogue extends PlayerClass{
 
-    public Rogue(Player player) {
-        super(player, 1, 0, 0, "Perfidus");
+    public Rogue(Player player, int team) {
+        super(player, team, 20, 200, 0, "Perfidus");
 
         ability1 = new Dummy(player);
         ability2 = new Dummy(player);

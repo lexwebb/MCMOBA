@@ -13,8 +13,8 @@ import org.bukkit.entity.Player;
  */
 public class Ranger extends PlayerClass{
 
-    public Ranger(Player player) {
-        super(player, 1, 0, 0, "Arcus");
+    public Ranger(Player player, int team) {
+        super(player, team,  20, 200, 0, "Arcus");
 
         ability1 = new Dummy(player);
         ability2 = new Dummy(player);

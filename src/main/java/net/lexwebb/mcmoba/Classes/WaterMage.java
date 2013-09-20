@@ -13,8 +13,8 @@ import org.bukkit.entity.Player;
  */
 public class WaterMage extends PlayerClass{
 
-    public WaterMage(Player player) {
-        super(player, 1, 0, 0, "Aquam");
+    public WaterMage(Player player, int team) {
+        super(player, team, 20, 200, 0, "Aquam");
 
         ability1 = new Dummy(player);
         ability2 = new Dummy(player);

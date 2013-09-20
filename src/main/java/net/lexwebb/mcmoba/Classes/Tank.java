@@ -13,8 +13,8 @@ import org.bukkit.entity.Player;
  */
 public class Tank extends PlayerClass{
 
-    public Tank(Player player) {
-        super(player, 1, 0, 0, "Saxum");
+    public Tank(Player player, int team) {
+        super(player, team, 20, 200, 0, "Saxum");
 
         ability1 = new Dummy(player);
         ability2 = new Dummy(player);

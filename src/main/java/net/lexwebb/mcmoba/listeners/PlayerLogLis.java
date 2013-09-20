@@ -43,7 +43,7 @@ public class PlayerLogLis extends DefaultListener{
         @Override
         public void run() {
             Main.instance.players.add(p);
-            Main.instance.playerClass.put(p, new EarthWarrior(p));
+            Main.instance.playerClass.put(p, new EarthWarrior(p, 1));
         }
     }
 }

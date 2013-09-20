@@ -36,13 +36,6 @@ public class EntityLis extends DefaultListener {
     }
 
     @EventHandler
-    public void onEntityDamage(EntityDamageEvent e){
-        if(e.getEntity() instanceof LivingEntity){
-            e.getEntity().getWorld().playEffect(e.getEntity().getLocation(), Effect.STEP_SOUND, Material.REDSTONE_WIRE);
-        }
-    }
-
-    @EventHandler
     public void onPlayerMove(PlayerMoveEvent e){
         if(e.getPlayer().getWorld().getBlockAt(e.getPlayer().getLocation()).getType().isSolid()){
             e.getPlayer().teleport(e.getPlayer().getLocation().add(0,1,0));
@@ -105,6 +98,8 @@ public class EntityLis extends DefaultListener {
     @EventHandler
     public void onPlayerDeath(PlayerRespawnEvent e){
         Main.instance.playerClass.get(e.getPlayer()).setItemSlots();
+        Main.instance.playerClass.get(e.getPlayer()).setCurrentHealth(20);
+        e.getPlayer().setTotalExperience(Main.instance.playerClass.get(e.getPlayer()).getBaseMana());
     }
 
 

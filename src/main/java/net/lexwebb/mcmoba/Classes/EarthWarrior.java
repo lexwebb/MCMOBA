@@ -19,8 +19,8 @@ import org.bukkit.inventory.ItemStack;
  */
 public class EarthWarrior extends PlayerClass {
 
-    public EarthWarrior(Player player) {
-        super(player, 1, 0, 0, "Terram");
+    public EarthWarrior(Player player, int team) {
+        super(player, team, 20, 200, 0, "Terram");
 
         ability1 = new EarthLeap(player);
         ability2 = new EarthSlam(player);

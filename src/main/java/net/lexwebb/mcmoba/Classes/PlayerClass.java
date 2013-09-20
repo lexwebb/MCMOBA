@@ -11,6 +11,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
@@ -28,7 +30,7 @@ import org.bukkit.inventory.meta.ItemMeta;
  */
 public abstract class PlayerClass extends DefaultListener{
     double baseHealth;
-    double baseMana;
+    int baseMana;
     int baseDamage;
 
     double currentHealth;
@@ -36,6 +38,8 @@ public abstract class PlayerClass extends DefaultListener{
 
     Player player;
     String type;
+
+    int team;
 
     public Ability ability1;
     public Ability ability2;
@@ -53,20 +57,33 @@ public abstract class PlayerClass extends DefaultListener{
 
     public ItemStack weapon = new ItemStack(Material.WOOD_SWORD);
 
-    public PlayerClass(Player player, double baseHealth, double baseMana, int baseDamage, String type){
+    public PlayerClass(Player player, int team, double baseHealth, int baseMana, int baseDamage, String type){
         super(Main.instance);
         this.player = player;
         this.baseHealth = baseHealth;
         this.currentHealth = baseHealth;
         this.baseMana = baseMana;
+        this.team = team;
 
         this.currentMana = baseMana;
         this.baseDamage = baseDamage;
         this.type = type;
 
         player.sendMessage("You are " + type);
-
+        player.setExp(0f);
+        player.setTotalExperience(20);
         setItemSlots();
+    }
+
+    public void damage(double damage, Entity entity, String attack){
+        this.currentHealth = this.currentHealth - damage;
+        player.sendMessage("health: " + currentHealth);
+        Main.instance.combatLog.playerDamageByEntity(player, damage, entity, attack);
+        if(currentHealth <= 0){
+            Main.instance.combatLog.playerKilledByEntity(player, damage, entity, attack);
+        }
+        if(currentHealth >= 0)
+        player.setHealth(this.currentHealth);
     }
 
     public void onRightClick(){
@@ -158,7 +175,7 @@ public abstract class PlayerClass extends DefaultListener{
         return currentHealth;
     }
 
-    public void setCurrentHealth(int currentHealth) {
+    public void setCurrentHealth(double currentHealth) {
         this.currentHealth = currentHealth;
     }
 
@@ -174,7 +191,7 @@ public abstract class PlayerClass extends DefaultListener{
         return baseHealth;
     }
 
-    public double getBaseMana() {
+    public int getBaseMana() {
         return baseMana;
     }
 
