@@ -64,23 +64,24 @@ public final class Main extends JavaPlugin {
             public void onOptionClick(IconMenu.OptionClickEvent event) {
                 event.getPlayer().sendMessage("You have chosen " + event.getName());
                 event.setWillClose(true);
+                Main.instance.playerClass.remove(event.getPlayer());
                 switch (event.getPosition()) {
-                    case 0: Main.instance.playerClass.remove(event.getPlayer());
+                    case 0:
                         Main.instance.playerClass.put(event.getPlayer(), new FireMage(event.getPlayer(), 1));
                         break;
-                    case 1: Main.instance.playerClass.remove(event.getPlayer());
+                    case 1:
                         Main.instance.playerClass.put(event.getPlayer(), new WaterMage(event.getPlayer(), 1));
                         break;
-                    case 2: Main.instance.playerClass.remove(event.getPlayer());
+                    case 2:
                         Main.instance.playerClass.put(event.getPlayer(), new EarthWarrior(event.getPlayer(), 1));
                         break;
-                    case 3: Main.instance.playerClass.remove(event.getPlayer());
+                    case 3:
                         Main.instance.playerClass.put(event.getPlayer(), new Rogue(event.getPlayer(), 1));
                         break;
-                    case 4: Main.instance.playerClass.remove(event.getPlayer());
+                    case 4:
                         Main.instance.playerClass.put(event.getPlayer(), new Ranger(event.getPlayer(), 1));
                         break;
-                    case 5: Main.instance.playerClass.remove(event.getPlayer());
+                    case 5:
                         Main.instance.playerClass.put(event.getPlayer(), new Tank(event.getPlayer(), 1));
                         break;
                 }
