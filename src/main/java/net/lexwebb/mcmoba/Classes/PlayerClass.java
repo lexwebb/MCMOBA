@@ -3,13 +3,23 @@ package net.lexwebb.mcmoba.Classes;
 import net.lexwebb.mcmoba.Abilities.Ability;
 import net.lexwebb.mcmoba.Main;
 import net.lexwebb.mcmoba.defaults.DefaultListener;
+import net.minecraft.server.v1_6_R2.EntityPlayer;
+import net.minecraft.server.v1_6_R2.IInventory;
+import net.minecraft.server.v1_6_R2.Packet103SetSlot;
+import net.minecraft.server.v1_6_R2.Slot;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,7 +30,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
  */
 public abstract class PlayerClass extends DefaultListener{
     double baseHealth;
-    double baseMana;
+    int baseMana;
     int baseDamage;
 
     double currentHealth;
@@ -28,6 +38,8 @@ public abstract class PlayerClass extends DefaultListener{
 
     Player player;
     String type;
+
+    int team;
 
     public Ability ability1;
     public Ability ability2;
@@ -38,16 +50,40 @@ public abstract class PlayerClass extends DefaultListener{
     int AThreeTaskId;
     int AFourTaskId;
 
-    public PlayerClass(Player player, double baseHealth, double baseMana, int baseDamage, String type){
+    public ItemStack slot1 = new ItemStack(Material.ARROW);
+    public ItemStack slot2 = new ItemStack(Material.ARROW);
+    public ItemStack slot3 = new ItemStack(Material.ARROW);
+    public ItemStack slot4 = new ItemStack(Material.ARROW);
+
+    public ItemStack weapon = new ItemStack(Material.WOOD_SWORD);
+
+    public PlayerClass(Player player, int team, double baseHealth, int baseMana, int baseDamage, String type){
         super(Main.instance);
         this.player = player;
         this.baseHealth = baseHealth;
         this.currentHealth = baseHealth;
         this.baseMana = baseMana;
+        this.team = team;
 
         this.currentMana = baseMana;
         this.baseDamage = baseDamage;
         this.type = type;
+
+        player.sendMessage("You are " + type);
+        player.setExp(0f);
+        player.setTotalExperience(20);
+        setItemSlots();
+    }
+
+    public void damage(double damage, Entity entity, String attack){
+        this.currentHealth = this.currentHealth - damage;
+        player.sendMessage("health: " + currentHealth);
+        Main.instance.combatLog.playerDamageByEntity(player, damage, entity, attack);
+        if(currentHealth <= 0){
+            Main.instance.combatLog.playerKilledByEntity(player, damage, entity, attack);
+        }
+        if(currentHealth >= 0)
+        player.setHealth(this.currentHealth);
     }
 
     public void onRightClick(){
@@ -58,10 +94,49 @@ public abstract class PlayerClass extends DefaultListener{
 
     }
 
+    public void setItemSlots(){
+
+        ItemMeta meta1 = slot1.getItemMeta();
+        ItemMeta meta2 = slot2.getItemMeta();
+        ItemMeta meta3 = slot3.getItemMeta();
+        ItemMeta meta4 = slot4.getItemMeta();
+
+        try{
+        meta1.setDisplayName(ability1.getName());
+        meta2.setDisplayName(ability2.getName());
+        meta3.setDisplayName(ability3.getName());
+        meta4.setDisplayName(ability4.getName());
+        } catch(Exception e){
+
+        }
+
+        slot1.setItemMeta(meta1);
+        slot2.setItemMeta(meta2);
+        slot3.setItemMeta(meta3);
+        slot4.setItemMeta(meta4);
+
+        player.getInventory().setItem(0, slot1);
+        player.getInventory().setItem(1, slot2);
+        player.getInventory().setItem(2, slot3);
+        player.getInventory().setItem(3, slot4);
+
+
+        player.getInventory().setItem(4, weapon);
+
+        ItemStack menu = new ItemStack(Material.BOOK);
+        ItemMeta meta = menu.getItemMeta();
+        meta.setDisplayName("Menu");
+        menu.setItemMeta(meta);
+
+        player.getInventory().setItem(8, menu);
+
+        player.getInventory().setHeldItemSlot(4);
+    }
+
     public void onAbilityOne(){
         if(!ability1.getOnCoolDown()){
             ability1.use();
-            AOneTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 1), 0, 10);
+            AOneTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 1), 0, 1);
         } else {
             player.sendMessage(ChatColor.DARK_RED +  "That Ability is on cooldown!");
         }
@@ -71,7 +146,7 @@ public abstract class PlayerClass extends DefaultListener{
     public void onAbilityTwo(){
         if(!ability2.getOnCoolDown()){
             ability2.use();
-            ATwoTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 2), 0, 10);
+            ATwoTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 2), 0, 1);
         } else {
             player.sendMessage(ChatColor.DARK_RED +  "That Ability is on cooldown!");
         }
@@ -80,7 +155,7 @@ public abstract class PlayerClass extends DefaultListener{
     public void onAbilityThree(){
         if(!ability3.getOnCoolDown()){
             ability3.use();
-            AThreeTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 3), 0, 10);
+            AThreeTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 3), 0, 1);
         } else {
             player.sendMessage(ChatColor.DARK_RED +  "That Ability is on cooldown!");
         }
@@ -89,7 +164,7 @@ public abstract class PlayerClass extends DefaultListener{
     public void onAbilityFour(){
         if(!ability4.getOnCoolDown()){
             ability4.use();
-            AFourTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 4), 0, 10);
+            AFourTaskId = Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.instance, new cooldown(player, 4), 0, 1);
         } else {
             player.sendMessage(ChatColor.DARK_RED +  "That Ability is on cooldown!");
         }
@@ -100,7 +175,7 @@ public abstract class PlayerClass extends DefaultListener{
         return currentHealth;
     }
 
-    public void setCurrentHealth(int currentHealth) {
+    public void setCurrentHealth(double currentHealth) {
         this.currentHealth = currentHealth;
     }
 
@@ -116,7 +191,7 @@ public abstract class PlayerClass extends DefaultListener{
         return baseHealth;
     }
 
-    public double getBaseMana() {
+    public int getBaseMana() {
         return baseMana;
     }
 
@@ -145,31 +220,39 @@ public abstract class PlayerClass extends DefaultListener{
         public void run() {
             switch (abilNo) {
                 case 1:
-                    if(ability1.getCoolDownLeft() > 0){
-                        p.getInventory().getItem(0).setAmount(ability1.getCoolDownLeft());
-                    } else {
-                        Bukkit.getScheduler().cancelTask(AOneTaskId);
+                    if(ability1.getCoolDownLeft() >= 0){
+                        p.getInventory().getItem(0).setAmount(ability1.getCoolDownLeft() +1);
+                        if(ability1.getCoolDownLeft() == 0){
+                            p.sendMessage(ability1.getName() + " is off cooldown!");
+                            Bukkit.getScheduler().cancelTask(AOneTaskId);
+                        }
                     }
                     break;
                 case 2:
-                    if(ability2.getCoolDownLeft() > 0){
-                        p.getInventory().getItem(1).setAmount(ability2.getCoolDownLeft());
-                    } else {
-                        Bukkit.getScheduler().cancelTask(ATwoTaskId);
+                    if(ability2.getCoolDownLeft() >= 0){
+                        p.getInventory().getItem(1).setAmount(ability2.getCoolDownLeft() +1);
+                        if(ability2.getCoolDownLeft() == 0){
+                            p.sendMessage(ability2.getName() + " is off cooldown!");
+                            Bukkit.getScheduler().cancelTask(ATwoTaskId);
+                        }
                     }
                     break;
                 case 3:
-                    if(ability3.getCoolDownLeft() > 0){
-                        p.getInventory().getItem(2).setAmount(ability3.getCoolDownLeft());
-                    } else {
-                        Bukkit.getScheduler().cancelTask(AThreeTaskId);
+                    if(ability3.getCoolDownLeft() >= 0){
+                        p.getInventory().getItem(2).setAmount(ability3.getCoolDownLeft() +1);
+                        if(ability3.getCoolDownLeft() == 0){
+                            p.sendMessage(ability3.getName() + " is off cooldown!");
+                            Bukkit.getScheduler().cancelTask(AThreeTaskId);
+                        }
                     }
                     break;
                 case 4:
-                    if(ability4.getCoolDownLeft() > 0){
-                        p.getInventory().getItem(3).setAmount(ability4.getCoolDownLeft());
-                    } else {
-                        Bukkit.getScheduler().cancelTask(AFourTaskId);
+                    if(ability4.getCoolDownLeft() >= 0){
+                        p.getInventory().getItem(3).setAmount(ability4.getCoolDownLeft() +1);
+                        if(ability4.getCoolDownLeft() == 0){
+                            p.sendMessage(ability4.getName() + " is off cooldown!");
+                            Bukkit.getScheduler().cancelTask(AFourTaskId);
+                        }
                     }
                     break;
             }

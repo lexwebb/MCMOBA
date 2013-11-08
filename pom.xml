@@ -30,20 +30,36 @@
             <id>sk89q-repo</id>
             <url>http://maven.sk89q.com/repo/</url>
         </repository>
+        <repository>
+            <id>remoteentities-repo</id>
+            <url>http://repo.infinityblade.de/remoteentities/releases</url>
+        </repository>
     </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.6.2-R0.1-SNAPSHOT</version>
+            <version>1.6.2-R0.1</version>
         </dependency>
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>craftbukkit</artifactId>
-            <version>1.6.2-R0.1-SNAPSHOT</version>
+            <version>1.6.2-R0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>de.kumpelblase2</groupId>
+            <artifactId>remoteentities</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.bergerkiller.bukkit</groupId>
+            <artifactId>BKCommonLib</artifactId>
+            <version>1.54</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
+
     <description>Minecraft MOBA</description>
 
     <build>

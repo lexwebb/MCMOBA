@@ -16,7 +16,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public abstract class Ability {
-    Player player;
+    public Player player;
     String name;
     Boolean singleTarget;
     Boolean AoE;

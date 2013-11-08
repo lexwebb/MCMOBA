@@ -1,6 +1,12 @@
 package net.lexwebb.mcmoba.defaults;
 
+import net.lexwebb.mcmoba.Main;
+import org.bukkit.Location;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -37,5 +43,15 @@ public class Utilities {
         } else {
             return null;
         }
+    }
+
+    public List<Entity> getNearbyLocationEntities(Player p, Location loc, double distance){
+        List<Entity> ents = new ArrayList<>();
+        for(Entity ent : p.getWorld().getEntities()){
+            if(ent.getLocation().distance(loc) < distance){
+                ents.add(ent);
+            }
+        }
+        return ents;
     }
 }
